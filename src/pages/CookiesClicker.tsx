@@ -1,15 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
+import cookies from "../data/cookies.json";
 
 const CookiesClicker: React.FC = () => {
+  const [count, setCount] = useState<number>(0); // État typé comme un nombre
+
+  const handleClick = (): void => {
+    setCount(count + 1); // Augmente la valeur de l'état
+  };
+
   return (
-    <div style={{ padding: "2rem", textAlign: "center" }}>
+    <div>
       <h1>Cookies Clicker</h1>
-      <button
-        onClick={() => alert("Jeu lancé !")}
-        style={{ marginRight: "1rem" }}
-      >
-        Lancer le Jeu
-      </button>
+      <div>
+        <label>
+          Nombre de cookies :
+          <input
+            type="text"
+            value={count}
+            readOnly // Empêche la modification directe par l'utilisateur
+          />
+        </label>
+      </div>
+      <button onClick={handleClick}>Augmenter</button>
     </div>
   );
 };
