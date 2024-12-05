@@ -1,0 +1,112 @@
+{
+  "lstTheme": [
+    {
+      "idTheme": 1,
+      "nomTheme": "Corps humain",
+      "cookie": "Globule blanc",
+      "image": "corps.jpg",
+      "lstNomBonus": [
+        {
+          "idBonus": 1,
+          "nom": "Bonus 1"
+        },
+        {
+          "idBonus": 2,
+          "nom": "Bonus 2"
+        }
+      ]
+    }
+  ],
+  "lstBonus": [
+    {
+      "idBonus": 1,
+      "prix": 20,
+      "multPrix": 2,
+      "type": "Autoclick",
+      "value": 1,
+      "descriptif": "Autoclick 1cps/sec"
+    },
+    {
+      "idBonus": 2,
+      "prix": 45,
+      "multPrix": 2,
+      "type": "Degats",
+      "value": 2,
+      "descriptif": "Dégâts clicks x2"
+    }
+  ],
+  "lstMalus": [
+    {
+      "idMalus": 1,
+      "prix": 20,
+      "multPrix": 1,
+      "type": "Reduction",
+      "value": 25,
+      "descriptif": "Reduction prix 25%"
+    },
+    {
+      "idMalus": 2,
+      "prix": 45,
+      "multPrix": 2,
+      "type": "Degats",
+      "value": 2,
+      "descriptif": "Dégâts -2"
+    }
+  ],
+  "lstEvenement": [
+    {
+      "idEvenement": 1,
+      "estBonus": true,
+      "prix": 20,
+      "multPrix": 2,
+      "type": "Autoclick",
+      "value": 5,
+      "descriptif": "Autoclick 5cps/sec"
+    },
+    {
+      "idEvenement": 2,
+      "estBonus": true,
+      "prix": 45,
+      "multPrix": 2,
+      "type": "Degats",
+      "value": 2,
+      "descriptif": "Dégâts clicks x2"
+    },
+    {
+      "idEvenement": 3,
+      "estBonus": false,
+      "prix": 20,
+      "multPrix": 1.5,
+      "type": "Reduction",
+      "value": 25,
+      "descriptif": "Reduction prix 25%"
+    },
+    {
+      "idEvenement": 6,
+      "estBonus": false,
+      "prix": 45,
+      "multPrix": 2,
+      "type": "Autoclick",
+      "value": 5,
+      "descriptif": "Autoclick 5cps/sec"
+    },
+    {
+      "idEvenement": 5,
+      "estBonus": true,
+      "prix": 45,
+      "multPrix": 2,
+      "type": "Degats",
+      "value": 2,
+      "descriptif": "Dégâts clicks x3"
+    },
+    {
+      "idEvenement": 7,
+      "estBonus": false,
+      "prix": 45,
+      "multPrix": 2,
+      "type": "Degats",
+      "value": 2,
+      "descriptif": "Dégâts clicks x2"
+    }
+  ]
+}
