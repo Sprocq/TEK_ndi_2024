@@ -1,0 +1,100 @@
+.cookies-clicker {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cookie-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.stats {
+  flex: 1;
+}
+
+.stats label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.stats input {
+  width: 100px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.stats p {
+  margin: 5px 0;
+}
+
+.button-container {
+  margin-left: 20px;
+}
+
+.increase-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.increase-button:hover {
+  background-color: #45a049;
+}
+
+.improvements {
+  margin-top: 20px;
+  display: inline-grid;
+}
+
+.improvements h2 {
+  margin-bottom: 10px;
+}
+
+.event-button {
+  display: inline-block;
+  width: auto;
+  background-color: #008cba;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 0 10px 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.event-button:hover {
+  background-color: #007bb5;
+}
+
+button {
+  margin-bottom: 3% !important;
+}
+
+.cookie {
+  display: block;
+  margin: 0 auto;
+  width: 75px;
+  height: 75px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
