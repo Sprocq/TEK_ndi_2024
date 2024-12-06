@@ -1,0 +1,121 @@
+{
+    "lstthemes": [
+        {
+            "id": "1",
+            "nomTheme": "Corps Humain",
+            "couleur": "#FFDDC1",
+            "lstEnnemis": [
+                {
+                    "nomEnnemi": "Cholesterol",
+                    "niveauEnnemi": 1,
+                    "descriptif": "Le cholestérol est une substance grasse (lipide) essentielle pour le corps humain. Il est naturellement produit par le foie et est également apporté par certains aliments. Il joue un rôle vital dans diverses fonctions biologiques, notamment : <ul><li>Constitution des membranes cellulaires : Il contribue à leur stabilité et leur fluidité.</li><li>Synthèse des hormones : Le cholestérol est un précurseur de certaines hormones, comme les hormones sexuelles (œstrogène, testostérone) et les corticostéroïdes.</li><li>Production de vitamine D : Il est utilisé par la peau pour produire de la vitamine D lorsqu'elle est exposée à la lumière solaire.</li><li>Formation de bile : Le cholestérol participe à la production des acides biliaires, essentiels à la digestion des graisses.</li></ul><br>Un taux élevé de cholestérol (hypercholestérolémie), peut entraîner des dépôts graisseux dans les artères (plaques d'athérome), ce qui augmente le risque de maladies cardiovasculaires comme les crises cardiaques et les AVC.",
+                    "paralleleOcean" : "Le carton dans les océans et le cholestérol dans le corps humain partagent des effets similaires sur leurs systèmes circulatoires respectifs :<ul><li>Obstruction des flux :<ul><li>Les déchets de carton perturbent les courants marins en formant des amas, bloquant les cycles vitaux de la faune.</li><li>Le cholestérol obstrue les artères, ralentissant la circulation sanguine et provoquant des maladies cardiovasculaires.</li></ul></li><li>Effets sur les écosystèmes et organes :<ul><li>Les déchets perturbent la distribution des nutriments, créant des zones mortes dans l’océan.</li><li>Le cholestérol prive les organes d’oxygène, entraînant des dommages irréversibles.</li></ul></li><li>Accumulation silencieuse :<ul><li>Les cartons, souvent plastifiés, se dégradent en microparticules invisibles mais persistantes.</li><li>Le cholestérol s'accumule sans symptôme jusqu’à des crises graves.</li></ul></li></ul>",
+                    "image": "cholesterol.jpg",
+                    "source": [
+                        "Source 1",
+                        "Source 2"
+                    ]
+                },
+                {
+                    "nomEnnemi": "Cigarette",
+                    "niveauEnnemi": 2,
+                    "descriptif": "Les cigarettes, contenant du tabac et des substances toxiques (nicotine, goudrons, monoxyde de carbone), ont des effets dévastateurs sur la santé :<ul><li>Système respiratoire : Elles causent bronchite, emphysème, et cancer du poumon.</li><li>Système cardiovasculaire : Elles augmentent les risques d’hypertension, d’athérosclérose, et d’AVC.</li><li>Immunité affaiblie : Elles réduisent la capacité à combattre les infections et à guérir.</li><li>Cancers : Elles sont liées à plusieurs cancers, notamment du poumon, de la gorge, et de la vessie.</li><li>Vieillissement accéléré : Elles favorisent les rides et la perte d’élasticité de la peau.</li><li>Addiction : La nicotine provoque une forte dépendance.</li>",
+                    "paralleleOcean" : "",
+                    "image": "https://via.placeholder.com/150",
+                    "source": [
+                        "Source 3",
+                        "Source 4"
+                    ]
+                },
+                {
+                    "nomEnnemi": "Champignon Gamma",
+                    "niveauEnnemi": 3,
+                    "descriptif": "Un champignon qui provoque des infections sévères.",
+                    "paralleleOcean" : "",
+                    "image": "https://via.placeholder.com/150",
+                    "source": [
+                        "Source 5",
+                        "Source 6"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "nomTheme": "Océan",
+            "couleur": "#C1F0F6",
+            "lstEnnemis": [
+                {
+                    "nomEnnemi": "Méduse Mortelle",
+                    "niveauEnnemi": 1,
+                    "descriptif": "Une méduse très toxique.",
+                    "image": "https://via.placeholder.com/150",
+                    "source": [
+                        "Source 7",
+                        "Source 8"
+                    ]
+                },
+                {
+                    "nomEnnemi": "Requin Alpha",
+                    "niveauEnnemi": 2,
+                    "descriptif": "Un prédateur marin redoutable.",
+                    "image": "https://via.placeholder.com/150",
+                    "source": [
+                        "Source 9",
+                        "Source 10"
+                    ]
+                },
+                {
+                    "nomEnnemi": "Kraken Légendaire",
+                    "niveauEnnemi": 3,
+                    "descriptif": "Une créature mythique des profondeurs.",
+                    "image": "https://via.placeholder.com/150",
+                    "source": [
+                        "Source 11",
+                        "Source 12"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "nomTheme": "Cyber",
+            "couleur": "#D1C1FF",
+            "lstEnnemis": [
+                {
+                    "nomEnnemi": "Malware Alpha",
+                    "niveauEnnemi": 1,
+                    "descriptif": "Un programme malveillant de type spyware.",
+                    "paralleleOcean" : "",
+                    "image": "https://via.placeholder.com/150",
+                    "source": [
+                        "Source 13",
+                        "Source 14"
+                    ]
+                },
+                {
+                    "nomEnnemi": "Virus Informatique Beta",
+                    "niveauEnnemi": 2,
+                    "descriptif": "Un virus capable de voler des données sensibles.",
+                    "paralleleOcean" : "",
+                    "image": "https://via.placeholder.com/150",
+                    "source": [
+                        "Source 15",
+                        "Source 16"
+                    ]
+                },
+                {
+                    "nomEnnemi": "AI Corrompue",
+                    "niveauEnnemi": 3,
+                    "descriptif": "Une intelligence artificielle devenue incontrôlable.",
+                    "paralleleOcean" : "",
+                    "image": "https://via.placeholder.com/150",
+                    "source": [
+                        "Source 17",
+                        "Source 18"
+                    ]
+                }
+            ]
+        }
+    ]
+}
