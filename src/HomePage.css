@@ -143,8 +143,8 @@ body {
 
   /* Style général pour Océan */
   .ocean {
-    background-color: white;
-    color: #2CDBEB; /* Vert néon */
+    background-color: #2CDBEB;
+    color: #fff; /* Vert néon */
   }
 
   .ocean header {
@@ -152,7 +152,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: white;
+    background-color: #2CDBEB;
   }
 
   .ocean .logo {
@@ -160,34 +160,34 @@ body {
   }
 
   .ocean header h1 {
-    color: #2CDBEB; /* Titre en vert */
-    text-shadow: 0px 0px 10px #2CDBEB;
-    background-color: white;
+    color: #fff; /* Titre en vert */
+    text-shadow: 0px 0px 10px #fff;
+    background-color: #2CDBEB;
   }
 
   .ocean select {
-    background-color: white;
-    color: #2CDBEB;
-    border: 1px solid #2CDBEB;
+    background-color: #2CDBEB;
+    color: #fff;
+    border: 1px solid #fff;
     padding: 5px;
     border-radius: 5px;
   }
 
   .ocean .zone {
-    border: 1px solid #2CDBEB;
-    color: #2CDBEB;
+    border: 1px solid #fff;
+    color: #fff;
     transition: all 0.3s ease;
   }
 
   .ocean .zone:hover {
-    background-color: #2CDBEB;
-    color: white;
+    background-color: #fff;
+    color: #2CDBEB;
   }
 
   .ocean .zone button {
-    color: white;
-    background-color: #2CDBEB;
-    border: 1px solid #2CDBEB;
+    color: #2CDBEB;
+    background-color: #fff;
+    border: 1px solid #fff;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
@@ -195,9 +195,9 @@ body {
   }
 
   .ocean .zone button:hover {
-    background-color: white;
-    color: #2CDBEB;
-    border: 1px solid #2CDBEB;
+    background-color: #2CDBEB;
+    color: #fff;
+    border: 1px solid #fff;
   }
 
   /* Style général pour Corps */
