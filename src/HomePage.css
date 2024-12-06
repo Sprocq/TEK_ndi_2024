@@ -156,7 +156,7 @@ body {
   }
 
   .ocean .logo {
-    filter: invert(100%) sepia(100%) saturate(10000%) hue-rotate(90deg) brightness(150%);
+    filter: invert(100%) brightness(100%);
   }
 
   .ocean header h1 {
