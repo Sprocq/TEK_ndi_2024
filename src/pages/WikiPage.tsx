@@ -122,14 +122,20 @@ const WikiPage: React.FC = () => {
                 />
               )}
             </div>
+
+            
             <div style={{ flex: 1, paddingLeft: "20px", textAlign: "left" }}>
               <h2>Nom : {currentEnemy.nomEnnemi || "Aucun ennemi"}</h2>
-              <p>Descriptif : {currentEnemy.descriptif || "Pas de description"}</p>
+              <p>Descriptif :
+                <span
+                  dangerouslySetInnerHTML={{ __html: currentEnemy.descriptif || "Pas de description" }}
+                />
+              </p>
               <p>
                 Parallèle :{" "}
-                {currentEnemy.paralleleOcean
-                  ? currentEnemy.paralleleOcean
-                  : "Pas de parallèle disponible"}
+                <span
+                  dangerouslySetInnerHTML={{ __html: currentEnemy.paralleleOcean || "Pas de parallèle disponible" }}
+                />
               </p>
             </div>
           </div>
