@@ -4,7 +4,7 @@
             "idTheme": 1,
             "nomTheme": "corps",
             "cookie": "Globule blanc",
-            "image": "globule_blanc.jpg",
+            "image": "globule_blanc.png",
             "lstNomBonus": [
                 {
                     "idBonus": 1,
@@ -44,7 +44,7 @@
             "idTheme": 2,
             "nomTheme": "ocean",
             "cookie": "Bateau",
-            "image": "bateau.jpg",
+            "image": "bateau.png",
             "lstNomBonus": [
                 {
                     "idBonus": 1,
@@ -84,7 +84,7 @@
             "idTheme": 3,
             "nomTheme": "cyber",
             "cookie": "Pare-feu",
-            "image": "pare-feu.jpg",
+            "image": "pare-feu.png",
             "lstNomBonus": [
                 {
                     "idBonus": 1,
@@ -119,42 +119,6 @@
                     "nom": "IA Turbo Boost"
                 }
             ]
-        }
-    ],
-    "lstBonus": [
-        {
-            "idBonus": 1,
-            "prix": 20,
-            "multPrix": 2,
-            "type": "Autoclick",
-            "value": 1,
-            "descriptif": "Autoclick 1cps"
-        },
-        {
-            "idBonus": 2,
-            "prix": 45,
-            "multPrix": 2,
-            "type": "Degats",
-            "value": 2,
-            "descriptif": "Dégâts clicks x2"
-        }
-    ],
-    "lstMalus": [
-        {
-            "idMalus": 1,
-            "prix": 20,
-            "multPrix": 1,
-            "type": "Reduction",
-            "value": 25,
-            "descriptif": "Reduction prix 25%"
-        },
-        {
-            "idMalus": 2,
-            "prix": 45,
-            "multPrix": 2,
-            "type": "Degats",
-            "value": 2,
-            "descriptif": "Dégâts -2"
         }
     ],
     "lstEvenement": [
@@ -221,17 +185,5 @@
             "value": 10,
             "descriptif": "Heure de Gloire : clics x10 pendant 10 secondes"
         }
-    ],
-    "partie": {
-        "idTheme": 1,
-        "score": 0,
-        "lstEvenement": [
-            {
-                "idEvenement": 1,
-                "niveau": 1
-            }
-        ],
-        "clickValue": 1,
-        "cps": 0
-    }
+    ]
 }
