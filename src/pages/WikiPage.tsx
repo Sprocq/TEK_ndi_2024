@@ -1,103 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 
-// Exemple de données JSON
-const data = {
-  lstthemes: [
-    {
-      id: "1",
-      nomTheme: "Corps Humain",
-      couleurFond: "#C41515",
-      couleurTexte: "#000000",
-      lstEnnemis: [
-        {
-          nomEnnemi: "Virus Alpha",
-          niveauEnnemi: 1,
-          descriptif: "Un virus dangereux pour le système immunitaire.",
-          image: "https://via.placeholder.com/150",
-          source: ["Source 1", "Source 2"],
-        },
-        {
-          nomEnnemi: "Bactérie Beta",
-          niveauEnnemi: 2,
-          descriptif: "Une bactérie qui attaque les poumons.",
-          image: "https://via.placeholder.com/150",
-          source: ["Source 3", "Source 4"],
-        },
-        {
-          nomEnnemi: "Champignon Gamma",
-          niveauEnnemi: 3,
-          descriptif: "Un champignon qui provoque des infections sévères.",
-          image: "https://via.placeholder.com/150",
-          source: ["Source 5", "Source 6"],
-        },
-      ],
-    },
-    {
-      id: "2",
-      nomTheme: "Océan",
-      couleurFond: "#2CDBEB",
-      couleurTexte: "#FFFFFF",
-      lstEnnemis: [
-        {
-          nomEnnemi: "Méduse Mortelle",
-          niveauEnnemi: 1,
-          descriptif: "Une méduse très toxique.",
-          image: "https://via.placeholder.com/150",
-          source: ["Source 7", "Source 8"],
-        },
-        {
-          nomEnnemi: "Requin Alpha",
-          niveauEnnemi: 2,
-          descriptif: "Un prédateur marin redoutable.",
-          image: "https://via.placeholder.com/150",
-          source: ["Source 9", "Source 10"],
-        },
-        {
-          nomEnnemi: "Kraken Légendaire",
-          niveauEnnemi: 3,
-          descriptif: "Une créature mythique des profondeurs.",
-          image: "https://via.placeholder.com/150",
-          source: ["Source 11", "Source 12"],
-        },
-      ],
-    },
-    {
-      id: "3",
-      nomTheme: "Cyber",
-      couleurFond: "#000000",
-      couleurTexte: "#00FF00",
-      lstEnnemis: [
-        {
-          nomEnnemi: "Malware Alpha",
-          niveauEnnemi: 1,
-          descriptif: "Un programme malveillant de type spyware.",
-          image: "https://via.placeholder.com/150",
-          source: ["Source 13", "Source 14"],
-        },
-        {
-          nomEnnemi: "Virus Informatique Beta",
-          niveauEnnemi: 2,
-          descriptif: "Un virus capable de voler des données sensibles.",
-          image: "https://via.placeholder.com/150",
-          source: ["Source 15", "Source 16"],
-        },
-        {
-          nomEnnemi: "AI Corrompue",
-          niveauEnnemi: 3,
-          descriptif: "Une intelligence artificielle devenue incontrôlable.",
-          image: "https://via.placeholder.com/150",
-          source: ["Source 17", "Source 18"],
-        },
-      ],
-    },
-  ],
-};
+// Importer les données JSON depuis le fichier local
+import wikiJson from "../data/wiki.json";
 
 const WikiPage: React.FC = () => {
   const navigate = useNavigate();
-  const [selectedTheme, setSelectedTheme] = useState(data.lstthemes[0]);
+  const [selectedTheme, setSelectedTheme] = useState(null);
   const [selectedLevel, setSelectedLevel] = useState(1);
+
+  // Charger les données du fichier JSON dans l'état
+  useEffect(() => {
+    setSelectedTheme(wikiJson.lstthemes[0]); // Charger le premier thème par défaut
+  }, []);
 
   const handleLevelClick = (level) => {
     setSelectedLevel(level);
@@ -107,27 +22,40 @@ const WikiPage: React.FC = () => {
     navigate('/');
   };
 
-  const currentEnemy =
-    selectedTheme.lstEnnemis.find((enemy) => enemy.niveauEnnemi === selectedLevel) || {};
-
-  // Fonction pour déterminer le filtre CSS basé sur le thème sélectionné
+  // Fonction pour déterminer le filtre CSS du logo en fonction du thème
   const getLogoFilter = () => {
+    if (!selectedTheme) return "none";
     switch (selectedTheme.nomTheme) {
       case "Océan":
-        return "invert(100%) brightness(100%)"; // Filtre pour le thème Océan
+        return "invert(100%) brightness(100%)";
       case "Cyber":
-        return "brightness(0) saturate(100%) invert(28%) sepia(100%) saturate(5000%) hue-rotate(90deg) brightness(200%)"; // Filtre pour le thème Cyber
+        return "brightness(0) saturate(100%) invert(28%) sepia(100%) saturate(5000%) hue-rotate(90deg) brightness(200%)";
       default:
-        return "none"; // Pas de filtre pour les autres thèmes (ex. Corps Humain)
+        return "none";
     }
   };
+
+  // Fonction pour récupérer le champ parallèle en fonction du thème et de l'ennemi
+  const getParalleleField = (enemy) => {
+    if (!selectedTheme) return "";
+    if (selectedTheme.nomTheme === "Océan") {
+      return enemy.parallele || "Pas de parallèle disponible";
+    } else if (selectedTheme.nomTheme === "Corps Humain" || selectedTheme.nomTheme === "Cyber") {
+      return enemy.paralleleOcean || "Pas de parallèle disponible";
+    }
+    return "";
+  };
+
+  // Trouver l'ennemi correspondant au niveau sélectionné
+  const currentEnemy =
+    selectedTheme?.lstEnnemis.find((enemy) => enemy.niveauEnnemi === selectedLevel) || {};
 
   return (
     <div style={{ height: "100vh", display: "flex", flexDirection: "column" }}>
       {/* Header */}
       <div
         style={{
-          backgroundColor: selectedTheme.couleurFond,
+          backgroundColor: selectedTheme?.couleur || "#fff",
           padding: "10px",
           display: "flex",
           alignItems: "center",
@@ -145,24 +73,24 @@ const WikiPage: React.FC = () => {
               filter: getLogoFilter(), // Application du filtre dynamique
             }}
           />
-          <h1 style={{ margin: 0, color: selectedTheme.couleurTexte }}>TEK Nuit De l'Info 2024</h1>
+          <h1 style={{ margin: 0, color: "#000" }}>TEK Nuit De l'Info 2024</h1>
         </div>
       </div>
 
       <div style={{ flex: 1, display: "flex" }}>
         {/* Colonne gauche */}
         <div style={{ width: "20%", display: "flex", flexDirection: "column" }}>
-          {data.lstthemes.map((theme) => (
+          {wikiJson.lstthemes.map((theme) => (
             <button
               key={theme.id}
               onClick={() => setSelectedTheme(theme)}
               style={{
                 flex: 1,
-                backgroundColor: theme.couleurFond,
-                color: theme.couleurTexte,
+                backgroundColor: theme.couleur,
+                color: "#000",
                 border: "1px solid #ddd",
                 cursor: "pointer",
-                fontWeight: selectedTheme.id === theme.id ? "bold" : "normal",
+                fontWeight: selectedTheme?.id === theme.id ? "bold" : "normal",
               }}
             >
               {theme.nomTheme}
@@ -187,8 +115,8 @@ const WikiPage: React.FC = () => {
                 onClick={() => handleLevelClick(level)}
                 style={{
                   fontWeight: selectedLevel === level ? "bold" : "normal",
-                  backgroundColor: selectedLevel === level ? selectedTheme.couleurFond : "#fff",
-                  color: selectedLevel === level ? selectedTheme.couleurTexte : "#000",
+                  backgroundColor: selectedLevel === level ? selectedTheme?.couleur : "#fff",
+                  color: selectedLevel === level ? "#000" : "#000",
                   border: "1px solid #ddd",
                   borderRadius: "5px",
                   cursor: "pointer",
@@ -216,10 +144,8 @@ const WikiPage: React.FC = () => {
               <h2>Nom : {currentEnemy.nomEnnemi || "Aucun ennemi"}</h2>
               <p>Descriptif : {currentEnemy.descriptif || "Pas de description"}</p>
               <p>
-                Sources :{" "}
-                {currentEnemy.source
-                  ? currentEnemy.source.join(", ")
-                  : "Pas de sources disponibles"}
+                Parallèle :{" "}
+                <span dangerouslySetInnerHTML={{ __html: getParalleleField(currentEnemy) }} />
               </p>
             </div>
           </div>
