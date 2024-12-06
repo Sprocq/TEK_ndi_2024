@@ -1,189 +1,190 @@
 {
-    "lstThemes": [
+  "lstThemes": [
+    {
+      "idTheme": 1,
+      "nomTheme": "corps",
+      "cookie": "Globule blanc",
+      "image": "globule_blanc.png",
+      "lstNomBonus": [
         {
-            "idTheme": 1,
-            "nomTheme": "corps",
-            "cookie": "Globule blanc",
-            "image": "globule_blanc.png",
-            "lstNomBonus": [
-                {
-                    "idBonus": 1,
-                    "nom": "Influx d'Adrénaline"
-                },
-                {
-                    "idBonus": 2,
-                    "nom": "Épidémie Virale"
-                },
-                {
-                    "idBonus": 3,
-                    "nom": "Transfusion Express"
-                },
-                {
-                    "idBonus": 4,
-                    "nom": "Rage Auto-immune"
-                },
-                {
-                    "idBonus": 5,
-                    "nom": "Hyperventilation"
-                },
-                {
-                    "idBonus": 6,
-                    "nom": "Greffe Mystère"
-                },
-                {
-                    "idBonus": 7,
-                    "nom": "Fièvre Nocturne"
-                },
-                {
-                    "idBonus": 8,
-                    "nom": "Méditation Cellulaire"
-                }
-            ]
+          "idBonus": 1,
+          "nom": "Influx d'Adrénaline"
         },
         {
-            "idTheme": 2,
-            "nomTheme": "ocean",
-            "cookie": "Bateau",
-            "image": "bateau.png",
-            "lstNomBonus": [
-                {
-                    "idBonus": 1,
-                    "nom": "Marée Haute"
-                },
-                {
-                    "idBonus": 2,
-                    "nom": "Tempête en Approche"
-                },
-                {
-                    "idBonus": 3,
-                    "nom": "Trésor Caché"
-                },
-                {
-                    "idBonus": 4,
-                    "nom": "Sillage Rapide"
-                },
-                {
-                    "idBonus": 5,
-                    "nom": "Équipage Renforcé"
-                },
-                {
-                    "idBonus": 6,
-                    "nom": "Baleine Généreuse"
-                },
-                {
-                    "idBonus": 7,
-                    "nom": "Phare Mystique"
-                },
-                {
-                    "idBonus": 8,
-                    "nom": "Capitaine Intrépide"
-                }
-            ]
+          "idBonus": 2,
+          "nom": "Épidémie Virale"
         },
         {
-            "idTheme": 3,
-            "nomTheme": "cyber",
-            "cookie": "Pare-feu",
-            "image": "pare-feu.png",
-            "lstNomBonus": [
-                {
-                    "idBonus": 1,
-                    "nom": "Hacker Inconnu"
-                },
-                {
-                    "idBonus": 2,
-                    "nom": "Surveillance Totale"
-                },
-                {
-                    "idBonus": 3,
-                    "nom": "Patch Urgent"
-                },
-                {
-                    "idBonus": 4,
-                    "nom": "Bug à Exploiter"
-                },
-                {
-                    "idBonus": 5,
-                    "nom": "Glitch Chaotique"
-                },
-                {
-                    "idBonus": 6,
-                    "nom": "Protection Anti-virus"
-                },
-                {
-                    "idBonus": 7,
-                    "nom": "Infiltration Numérique"
-                },
-                {
-                    "idBonus": 8,
-                    "nom": "IA Turbo Boost"
-                }
-            ]
+          "idBonus": 3,
+          "nom": "Transfusion Express"
+        },
+        {
+          "idBonus": 4,
+          "nom": "Rage Auto-immune"
+        },
+        {
+          "idBonus": 5,
+          "nom": "Hyperventilation"
+        },
+        {
+          "idBonus": 6,
+          "nom": "Greffe Mystère"
+        },
+        {
+          "idBonus": 7,
+          "nom": "Fièvre Nocturne"
+        },
+        {
+          "idBonus": 8,
+          "nom": "Méditation Cellulaire"
         }
-    ],
-    "lstEvenement": [
+      ]
+    },
+    {
+      "idTheme": 2,
+      "nomTheme": "ocean",
+      "cookie": "Bateau",
+      "image": "bateau.png",
+      "lstNomBonus": [
         {
-            "idEvenement": 1,
-            "estBonus": true,
-            "prix": 20,
-            "multPrix": 2,
-            "type": "Autoclick",
-            "value": 5,
-            "descriptif": "Autoclick 5cps"
+          "idBonus": 1,
+          "nom": "Marée Haute"
         },
         {
-            "idEvenement": 2,
-            "estBonus": true,
-            "prix": 100,
-            "multPrix": 2,
-            "type": "Degats",
-            "value": 2,
-            "descriptif": "Dégâts clicks x2"
+          "idBonus": 2,
+          "nom": "Tempête en Approche"
         },
         {
-            "idEvenement": 3,
-            "estBonus": false,
-            "prix": 500,
-            "multPrix": 2,
-            "type": "Reduction",
-            "value": 25,
-            "descriptif": "Reduction prix 25%"
+          "idBonus": 3,
+          "nom": "Trésor Caché"
         },
         {
-            "idEvenement": 6,
-            "estBonus": false,
-            "prix": 800,
-            "multPrix": 2,
-            "type": "Autoclick",
-            "value": 5,
-            "descriptif": "Autoclick 5cps"
+          "idBonus": 4,
+          "nom": "Sillage Rapide"
         },
         {
-            "idEvenement": 5,
-            "estBonus": true,
-            "prix": 2000,
-            "multPrix": 2,
-            "type": "Degats",
-            "value": 2,
-            "descriptif": "Dégâts clicks x3"
+          "idBonus": 5,
+          "nom": "Équipage Renforcé"
         },
         {
-            "idEvenement": 7,
-            "estBonus": false,
-            "prix": 10000,
-            "multPrix": 2,
-            "type": "Degats",
-            "value": 2,
-            "descriptif": "Dégâts clicks x2"
+          "idBonus": 6,
+          "nom": "Baleine Généreuse"
         },
         {
-            "idEvenement": 8,
-            "estBonus": true,
-            "prix": 100000,
-            "multPrix": 4,
-            "type": "Production",
-            "value": 10,
-            "descriptif": "Heure de Gloire : clics x10 pendant 10 secondes"
+          "idBonus": 7,
+          "nom": "Phare Mystique"
+        },
+        {
+          "idBonus": 8,
+          "nom": "Capitaine Intrépide"
         }
-    ]
+      ]
+    },
+    {
+      "idTheme": 3,
+      "nomTheme": "cyber",
+      "cookie": "Pare-feu",
+      "image": "pare-feu.png",
+      "lstNomBonus": [
+        {
+          "idBonus": 1,
+          "nom": "Hacker Inconnu"
+        },
+        {
+          "idBonus": 2,
+          "nom": "Surveillance Totale"
+        },
+        {
+          "idBonus": 3,
+          "nom": "Patch Urgent"
+        },
+        {
+          "idBonus": 4,
+          "nom": "Bug à Exploiter"
+        },
+        {
+          "idBonus": 5,
+          "nom": "Glitch Chaotique"
+        },
+        {
+          "idBonus": 6,
+          "nom": "Protection Anti-virus"
+        },
+        {
+          "idBonus": 7,
+          "nom": "Infiltration Numérique"
+        },
+        {
+          "idBonus": 8,
+          "nom": "IA Turbo Boost"
+        }
+      ]
+    }
+  ],
+  "lstEvenement": [
+    {
+      "idEvenement": 1,
+      "estBonus": true,
+      "prix": 5,
+      "multPrix": 2,
+      "type": "Autoclick",
+      "value": 5,
+      "descriptif": "Autoclick 5cps"
+    },
+    {
+      "idEvenement": 2,
+      "estBonus": true,
+      "prix": 100,
+      "multPrix": 2,
+      "type": "Degats",
+      "value": 2,
+      "descriptif": "Dégâts clicks x2"
+    },
+    {
+      "idEvenement": 3,
+      "estBonus": false,
+      "prix": 500,
+      "multPrix": 2,
+      "type": "Reduction",
+      "value": 25,
+      "descriptif": "Reduction prix 25%"
+    },
+    {
+      "idEvenement": 6,
+      "estBonus": false,
+      "prix": 800,
+      "multPrix": 2,
+      "type": "Autoclick",
+      "value": 5,
+      "descriptif": "Autoclick 5cps"
+    },
+    {
+      "idEvenement": 5,
+      "estBonus": true,
+      "prix": 2000,
+      "multPrix": 2,
+      "type": "Degats",
+      "value": 3,
+      "descriptif": "Dégâts clicks x3"
+    },
+    {
+      "idEvenement": 7,
+      "estBonus": false,
+      "prix": 10000,
+      "multPrix": 2,
+      "type": "Degats",
+      "value": 2,
+      "descriptif": "Dégâts clicks x2"
+    },
+    {
+      "idEvenement": 8,
+      "estBonus": true,
+      "prix": 100000,
+      "multPrix": 4,
+      "type": "Production",
+      "value": 10,
+      "descriptif": "Heure de Gloire : clics x10 pendant 10 secondes",
+      "temps": 10
+    }
+  ]
 }
