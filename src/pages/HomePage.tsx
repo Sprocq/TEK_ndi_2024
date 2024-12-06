@@ -1,14 +1,24 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../HomePage.css';
 import logo from '../images/tek.png'; // Ajout du logo
 
 const HomePage: React.FC = () => {
+  const navigate = useNavigate();
   const [theme, setTheme] = useState<'corps' | 'ocean' | 'cyber'>('ocean');
   const [hoveredSection, setHoveredSection] = useState<string | null>(null);
 
   // Gérer le changement de thème
   const handleThemeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setTheme(e.target.value as 'corps' | 'ocean' | 'cyber');
+  };
+
+  const handleGoToWiki = () => {
+    navigate('/wiki');
+  };
+
+  const handleGoToCookiesClicker = () => {
+    navigate('/CookiesClicker');
   };
 
   return (
@@ -38,7 +48,7 @@ const HomePage: React.FC = () => {
           {hoveredSection === 'cookieclicker' && (
             <button
               className="action-button"
-              onClick={() => alert('Cookieclicker lancé !')}
+              onClick={handleGoToCookiesClicker}
             >
               Démarrer Cookieclicker
             </button>
@@ -74,7 +84,7 @@ const HomePage: React.FC = () => {
           {/* <img src="wiki.jpg" alt="Wiki" /> */}
           <h2>Wiki</h2>
           {hoveredSection === 'wiki' && (
-            <button className="action-button">Explorer le Wiki</button>
+            <button className="action-button" onClick={handleGoToWiki}>Explorer le Wiki</button>
           )}
         </div>
       </div>
