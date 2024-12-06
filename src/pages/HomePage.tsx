@@ -7,11 +7,25 @@ const HomePage: React.FC = () => {
   const navigate = useNavigate();
   const [theme, setTheme] = useState<'corps' | 'ocean' | 'cyber'>('ocean');
   const [hoveredSection, setHoveredSection] = useState<string | null>(null);
+  const [Jeu_background, setJeu_background] = useState('../src/images/Jeu_Ocean.jpg');
 
   // Gérer le changement de thème
   const handleThemeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setTheme(e.target.value as 'corps' | 'ocean' | 'cyber');
+    handleImageChange(e.target.value as 'corps' | 'ocean' | 'cyber');
   };
+
+  const handleImageChange = (p0: string) => {
+    if(p0 == 'corps'){
+      setJeu_background('../src/images/Jeu_Corps.png');
+    }
+    if(p0 == 'ocean'){
+      setJeu_background('../src/images/Jeu_Ocean.jpg');
+    }
+    if(p0 == 'cyber'){
+      setJeu_background('../src/images/Jeu_Cyber.jpg');
+    }
+  }
 
   const handleGoToWiki = () => {
     navigate('/wiki');
@@ -41,9 +55,15 @@ const HomePage: React.FC = () => {
           className={`section ${hoveredSection === 'cookieclicker' ? 'hovered' : ''}`}
           onMouseEnter={() => setHoveredSection('cookieclicker')}
           onMouseLeave={() => setHoveredSection(null)}
+          style={{
+            backgroundImage: `url(../src/images/logo_cookiecliker.png)`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            width: '100%',
+            height: '100%'
+          }}
         >
-          {/* Ajouter une image en fond ici */}
-          {/* <img src="cookieclicker.jpg" alt="Cookieclicker" /> */}
           <h2>Cookieclicker</h2>
           {hoveredSection === 'cookieclicker' && (
             <button
@@ -60,9 +80,15 @@ const HomePage: React.FC = () => {
           className={`section ${hoveredSection === 'jeu' ? 'hovered' : ''}`}
           onMouseEnter={() => setHoveredSection('jeu')}
           onMouseLeave={() => setHoveredSection(null)}
+          style={{
+            backgroundImage: `url(${Jeu_background})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            width: '100%',
+            height: '100%'
+          }}
         >
-          {/* Ajouter une image en fond ici */}
-          {/* <img src="jeu.jpg" alt="Jeu" /> */}
           <h2>Jeu</h2>
           {hoveredSection === 'jeu' && (
             <button
@@ -79,9 +105,15 @@ const HomePage: React.FC = () => {
           className={`section ${hoveredSection === 'wiki' ? 'hovered' : ''}`}
           onMouseEnter={() => setHoveredSection('wiki')}
           onMouseLeave={() => setHoveredSection(null)}
+          style={{
+            backgroundImage: `url(../src/images/wiki.jpg)`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            width: '100%',
+            height: '100%'
+          }}
         >
-          {/* Ajouter une image en fond ici */}
-          {/* <img src="wiki.jpg" alt="Wiki" /> */}
           <h2>Wiki</h2>
           {hoveredSection === 'wiki' && (
             <button className="action-button" onClick={handleGoToWiki}>Explorer le Wiki</button>
