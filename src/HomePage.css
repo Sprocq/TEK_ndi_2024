@@ -1,0 +1,256 @@
+/* Corps global */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .homepage {
+    text-align: center;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ddd;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    width: 71.57px;
+    height: 50px;
+    margin-right: 1rem;
+  }
+  
+  .theme-select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Conteneur principal */
+  .main-content {
+    display: flex;
+    height: 80vh;
+  }
+  
+  .section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: flex 0.3s ease-in-out;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    cursor: pointer;
+  }
+  
+  /* Quand une section est survolée */
+  .section.hovered {
+    flex: 3;
+    background-color: #f0f0f0;
+  }
+  
+  /* Titres des sections */
+  .section h2 {
+    position: absolute;
+    bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  /* Bouton contextuel */
+  .action-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .action-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Thèmes */
+  /* Style général pour Cyber */
+  .cyber {
+    background-color: black;
+    color: #00ff00; /* Vert néon */
+  }
+
+  .cyber header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: black;
+  }
+
+  .cyber .logo {
+    filter: brightness(0) saturate(100%) invert(28%) sepia(100%) saturate(5000%) hue-rotate(90deg) brightness(200%);
+  }
+
+  .cyber header h1 {
+    color: #00ff00; /* Titre en vert */
+    text-shadow: 0px 0px 10px #00ff00;
+    background-color: black;
+  }
+
+  .cyber select {
+    background-color: black;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .cyber .zone {
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    transition: all 0.3s ease;
+  }
+
+  .cyber .zone:hover {
+    background-color: #00ff00;
+    color: black;
+  }
+
+  .cyber .zone button {
+    color: black;
+    background-color: #00ff00;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .cyber .zone button:hover {
+    background-color: black;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+  }
+
+  /* Style général pour Océan */
+  .ocean {
+    background-color: white;
+    color: #2CDBEB; /* Vert néon */
+  }
+
+  .ocean header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+  }
+
+  .ocean .logo {
+    filter: invert(100%) sepia(100%) saturate(10000%) hue-rotate(90deg) brightness(150%);
+  }
+
+  .ocean header h1 {
+    color: #2CDBEB; /* Titre en vert */
+    text-shadow: 0px 0px 10px #2CDBEB;
+    background-color: white;
+  }
+
+  .ocean select {
+    background-color: white;
+    color: #2CDBEB;
+    border: 1px solid #2CDBEB;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .ocean .zone {
+    border: 1px solid #2CDBEB;
+    color: #2CDBEB;
+    transition: all 0.3s ease;
+  }
+
+  .ocean .zone:hover {
+    background-color: #2CDBEB;
+    color: white;
+  }
+
+  .ocean .zone button {
+    color: white;
+    background-color: #2CDBEB;
+    border: 1px solid #2CDBEB;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .ocean .zone button:hover {
+    background-color: white;
+    color: #2CDBEB;
+    border: 1px solid #2CDBEB;
+  }
+
+  /* Style général pour Corps */
+  .corps {
+    background-color: #C41515;
+    color: black; /* Vert néon */
+  }
+
+  .corps header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #C41515;
+  }
+
+  .corps header h1 {
+    color: black; /* Titre en vert */
+    text-shadow: 0px 0px 10px black;
+    background-color: #C41515;
+  }
+
+  .corps select {
+    background-color: #C41515;
+    color: black;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .corps .zone {
+    border: 1px solid black;
+    color: black;
+    transition: all 0.3s ease;
+  }
+
+  .corps .zone:hover {
+    background-color: black;
+    color: #C41515;
+  }
+
+  .corps .zone button {
+    color: #C41515;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .corps .zone button:hover {
+    background-color: #C41515;
+    color: black;
+    border: 1px solid black;
+  }
