@@ -10,33 +10,21 @@
                     "niveauEnnemi": 1,
                     "descriptif": "Le cholestérol est une substance grasse (lipide) essentielle pour le corps humain. Il est naturellement produit par le foie et est également apporté par certains aliments. Il joue un rôle vital dans diverses fonctions biologiques, notamment : <ul><li>Constitution des membranes cellulaires : Il contribue à leur stabilité et leur fluidité.</li><li>Synthèse des hormones : Le cholestérol est un précurseur de certaines hormones, comme les hormones sexuelles (œstrogène, testostérone) et les corticostéroïdes.</li><li>Production de vitamine D : Il est utilisé par la peau pour produire de la vitamine D lorsqu'elle est exposée à la lumière solaire.</li><li>Formation de bile : Le cholestérol participe à la production des acides biliaires, essentiels à la digestion des graisses.</li></ul><br>Un taux élevé de cholestérol (hypercholestérolémie), peut entraîner des dépôts graisseux dans les artères (plaques d'athérome), ce qui augmente le risque de maladies cardiovasculaires comme les crises cardiaques et les AVC.",
                     "paralleleOcean" : "Le carton dans les océans et le cholestérol dans le corps humain partagent des effets similaires sur leurs systèmes circulatoires respectifs :<ul><li>Obstruction des flux :<ul><li>Les déchets de carton perturbent les courants marins en formant des amas, bloquant les cycles vitaux de la faune.</li><li>Le cholestérol obstrue les artères, ralentissant la circulation sanguine et provoquant des maladies cardiovasculaires.</li></ul></li><li>Effets sur les écosystèmes et organes :<ul><li>Les déchets perturbent la distribution des nutriments, créant des zones mortes dans l’océan.</li><li>Le cholestérol prive les organes d’oxygène, entraînant des dommages irréversibles.</li></ul></li><li>Accumulation silencieuse :<ul><li>Les cartons, souvent plastifiés, se dégradent en microparticules invisibles mais persistantes.</li><li>Le cholestérol s'accumule sans symptôme jusqu’à des crises graves.</li></ul></li></ul>",
-                    "image": "cholesterol.jpg",
-                    "source": [
-                        "Source 1",
-                        "Source 2"
-                    ]
+                    "image": "cholesterol.jpg"
                 },
                 {
                     "nomEnnemi": "Cigarette",
                     "niveauEnnemi": 2,
-                    "descriptif": "Les cigarettes, contenant du tabac et des substances toxiques (nicotine, goudrons, monoxyde de carbone), ont des effets dévastateurs sur la santé :<ul><li>Système respiratoire : Elles causent bronchite, emphysème, et cancer du poumon.</li><li>Système cardiovasculaire : Elles augmentent les risques d’hypertension, d’athérosclérose, et d’AVC.</li><li>Immunité affaiblie : Elles réduisent la capacité à combattre les infections et à guérir.</li><li>Cancers : Elles sont liées à plusieurs cancers, notamment du poumon, de la gorge, et de la vessie.</li><li>Vieillissement accéléré : Elles favorisent les rides et la perte d’élasticité de la peau.</li><li>Addiction : La nicotine provoque une forte dépendance.</li>",
-                    "paralleleOcean" : "",
-                    "image": "https://via.placeholder.com/150",
-                    "source": [
-                        "Source 3",
-                        "Source 4"
-                    ]
+                    "descriptif": "Les cigarettes, contenant du tabac et des substances toxiques (nicotine, goudrons, monoxyde de carbone), ont des effets dévastateurs sur la santé :<ul><li>Système respiratoire : Elles causent bronchite, emphysème, et cancer du poumon.</li><li>Système cardiovasculaire : Elles augmentent les risques d’hypertension, d’athérosclérose, et d’AVC.</li><li>Immunité affaiblie : Elles réduisent la capacité à combattre les infections et à guérir.</li><li>Cancers : Elles sont liées à plusieurs cancers, notamment du poumon, de la gorge, et de la vessie.</li><li>Vieillissement accéléré : Elles favorisent les rides et la perte d’élasticité de la peau.</li><li>Addiction : La nicotine provoque une forte dépendance.</li></ul>",
+                    "paralleleOcean" : "Les sacs plastiques dans les océans et les cigarettes dans le corps humain partagent des effets similaires en termes de pollution et de détérioration progressive : <ul><li>Pollution et Invasion :Les sacs plastiques envahissent les océans, perturbent la faune marine et se décomposent en microplastiques, créant une pollution à long terme. De même, les cigarettes polluent les poumons avec des substances toxiques qui perturbent la respiration et l'équilibre des organes internes.</li><li>Détérioration Progressive :Les sacs plastiques, bien qu'inofensifs au début, causent des dommages durables aux écosystèmes marins en s'accumulant et en créant des zones mortes. De manière similaire, le tabagisme entraîne des maladies graves (cancer, AVC, maladies respiratoires) à long terme, souvent invisibles au début.</li><li>Accumulation Silencieuse : Les sacs plastiques s'accumulent lentement dans les océans, devenant visibles avec le temps, tout comme le tabagisme qui n'affiche souvent pas de symptômes immédiats, mais qui détériore progressivement les poumons et le cœur.</li><li>Répercussions Globales : Les sacs plastiques affectent non seulement la faune marine mais aussi l'ensemble de la chaîne alimentaire, incluant les humains. Le tabagisme, à son tour, affecte non seulement le fumeur mais aussi ceux qui l'entourent à travers le tabagisme passif.</li></ul>",
+                    "image": "cigarette.png"
                 },
                 {
-                    "nomEnnemi": "Champignon Gamma",
+                    "nomEnnemi": "Alcool",
                     "niveauEnnemi": 3,
-                    "descriptif": "Un champignon qui provoque des infections sévères.",
-                    "paralleleOcean" : "",
-                    "image": "https://via.placeholder.com/150",
-                    "source": [
-                        "Source 5",
-                        "Source 6"
-                    ]
+                    "descriptif": "L'alcool est une substance psychoactive qui, bien que consommée modérément dans certaines cultures, peut être nocive pour le corps humain lorsqu'elle est ingérée en excès. Elle affecte principalement : <ul><li>Le foie : consommation excessive peut causer des maladies comme la stéatose hépatique, la cirrhose et le cancer du foie.</li><li>cerveau : elle altère la mémoire, la coordination et peut entraîner des troubles neurologiques à long terme.</li><li>La dépendance : l'alcool peut créer une addiction, rendant difficile l'arrêt malgré les effets négatifs.</li><li>Le cœur et les vaisseaux : elle augmente le risque de maladies cardiovasculaires, AVC et insuffisance cardiaque.Le cancer : l'alcool est un facteur de risque pour plusieurs types de cancers.</li><li>Le système digestif et immunitaire : elle irrite le tube digestif et affaiblit le système immunitaire.</li></ul><br>En somme, l'alcool peut avoir des conséquences graves pour la santé lorsqu'il est consommé de manière excessive ou régulière.",
+                    "paralleleOcean" : "Le parallèle entre la surpêche et la consommation excessive d'alcool repose sur une exploitation excessive et des conséquences à long terme sur les systèmes vitaux :<ul><li>Exploitation excessive : La surpêche épuise les ressources marines, tandis que l'alcool surcharge les organes comme le foie.</li><li>Perturbation de l'équilibre : La surpêche déséquilibre les écosystèmes marins, tout comme l'alcool perturbe le fonctionnement du corps.</li><li>Dégâts irréversibles : L'épuisement des ressources marines et les dommages au foie par l'alcool peuvent être irréversibles.</li><li>Impact systémique : La surpêche fragilise tout l'écosystème, de même que l'alcool affaiblit l'ensemble du corps.</li><li>Récupération difficile : Les océans et le corps humain peuvent se régénérer, mais la récupération complète est souvent impossible.</li><li>Prévention : Une gestion durable et une consommation modérée sont essentielles pour éviter les dommages à long terme.</li></ul>",
+                    "image": "alcool.jpg"
                 }
             ]
         },
@@ -46,7 +34,7 @@
             "couleur": "#C1F0F6",
             "lstEnnemis": [
                 {
-                    "nomEnnemi": "Méduse Mortelle",
+                    "nomEnnemi": "Carton",
                     "niveauEnnemi": 1,
                     "descriptif": "Une méduse très toxique.",
                     "image": "https://via.placeholder.com/150",
