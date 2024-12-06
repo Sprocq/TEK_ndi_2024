@@ -42,16 +42,16 @@
                     "image": "carton.jpg"
                 },
                 {
-                    "nomEnnemi": "Requin Alpha",
+                    "nomEnnemi": "Sac plastique",
                     "niveauEnnemi": 2,
-                    "descriptif": "Un prédateur marin redoutable.",
-                    "image": "https://via.placeholder.com/150"
+                    "descriptif": "Les sacs plastiques ont un impact majeur sur l'océan en raison de leur lente dégradation. Ils flottent à la surface ou se déposent dans les fonds marins, perturbant les écosystèmes et la faune. Les animaux marins, comme les tortues et les poissons, peuvent ingérer ces sacs, ce qui entraîne des blocages dans leur système digestif, des blessures internes, voire la mort. Les sacs plastiques finissent également par se décomposer en microplastiques, qui pénètrent dans la chaîne alimentaire marine, affectant la santé des espèces marines et, indirectement, des humains qui consomment des produits de la mer.",
+                    "image": "sac_plastique.jpg"
                 },
                 {
-                    "nomEnnemi": "Kraken Légendaire",
+                    "nomEnnemi": "Surpêche",
                     "niveauEnnemi": 3,
-                    "descriptif": "Une créature mythique des profondeurs.",
-                    "image": "https://via.placeholder.com/150"
+                    "descriptif": "La surpêche plastique désigne l'exploitation excessive des ressources marines, principalement les poissons et autres espèces marines, par le biais de la pêche illégale ou non durable. Cela perturbe l'équilibre des écosystèmes marins et contribue à la diminution de certaines populations animales. Parallèlement, l'accumulation de plastiques dans les océans aggrave cette situation en menaçant la biodiversité. Les déchets plastiques, comme les filets de pêche abandonnés ou les plastiques dérivés des activités humaines, piègent et tuent les espèces marines, bloquent les habitats naturels et affectent gravement la santé des océans.",
+                    "image": "surpeche.jpg"
                 }
             ]
         },
@@ -62,25 +62,25 @@
             "couleurTexte": "#00FF00",
             "lstEnnemis": [
                 {
-                    "nomEnnemi": "Malware Alpha",
+                    "nomEnnemi": "Robot",
                     "niveauEnnemi": 1,
-                    "descriptif": "Un programme malveillant de type spyware.",
-                    "paralleleOcean": "",
-                    "image": "https://via.placeholder.com/150"
+                    "descriptif": "Un robot ou bot est un programme informatique automatisé conçu pour exécuter des tâches répétitives sur internet. Les bots peuvent être utilisés à des fins légitimes, comme l’indexation des sites web par les moteurs de recherche, mais certains bots sont utilisés à des fins nuisibles. Par exemple, des bots malveillants peuvent être utilisés pour envoyer des spams, réaliser des attaques par déni de service (DDoS), ou collecter illégalement des informations personnelles.",
+                    "paralleleOcean": "Les cartons dans l'océan et les robots malveillants partagent des effets similaires :<ul><li>Pollution et Accumulation : Les cartons encombrent l’océan et perturbent les écosystèmes marins, tandis que les robots (bots) polluent l'espace numérique en générant des spams et ralentissant les systèmes.</li><li>Perturbation des systèmes : Les cartons bloquent les courants marins et les échanges de nutriments, tandis que les bots perturbent les serveurs et ralentissent l’accès aux informations.</li><li>Impact invisible : Les cartons sont souvent invisibles sous forme de microplastiques, tout comme les bots agissent en arrière-plan, créant des nuisances discrètes mais durables.</li></ul><br>En somme, les deux créent des déséquilibres à long terme, soit dans l'océan, soit dans le cyberespace.",
+                    "image": "robot.jpg"
                 },
                 {
-                    "nomEnnemi": "Virus Informatique Beta",
+                    "nomEnnemi": "Publicités malveillantes",
                     "niveauEnnemi": 2,
-                    "descriptif": "Un virus capable de voler des données sensibles.",
-                    "paralleleOcean": "",
-                    "image": "https://via.placeholder.com/150"
+                    "descriptif": "La publicité malveillante désigne des publicités en ligne conçues pour tromper ou nuire à l'utilisateur. Elles incluent souvent des techniques telles que :<ul><li>Publicités mensongères : qui diffusent de fausses informations pour inciter à des actions comme des achats ou des téléchargements.</li><li>Publicités invasives : qui perturbent l'expérience utilisateur, telles que les pop-ups ou les redirections non sollicitées.</li><li>Publicités malveillantes (malvertising) : qui cachent des logiciels malveillants ou des virus sous forme de bannières ou de vidéos publicitaires, infectant ainsi les dispositifs des utilisateurs.</li></ul><br>Ces pratiques ont pour but d'exploiter les internautes, d'injecter des malwares ou de manipuler leur comportement en ligne de manière nuisible..",
+                    "paralleleOcean": "Les publicités malveillantes et les sacs plastiques partagent plusieurs similitudes :<ul><li>Pollution invisible : Les publicités malveillantes s'infiltrent discrètement dans l'expérience en ligne, tout comme les sacs plastiques flottent souvent sous l'eau avant d'être visibles.</li><li>Accumulation : Les deux s'accumulent lentement : les publicités envahissent l'expérience utilisateur, tandis que les sacs plastiques polluent l'océan.</li><li>Impact à long terme : Les publicités nuisent à la sécurité numérique et à l'expérience, tandis que les sacs plastiques endommagent les écosystèmes marins.</li><li>Difficulté de nettoyage : Les publicités malveillantes sont difficiles à supprimer, tout comme les sacs plastiques qui mettent des siècles à se décomposer dans l'océan.</li></ul>",
+                    "image": "pub_malveillantes.jpg"
                 },
                 {
-                    "nomEnnemi": "AI Corrompue",
+                    "nomEnnemi": "Infrastructures Cloud",
                     "niveauEnnemi": 3,
-                    "descriptif": "Une intelligence artificielle devenue incontrôlable.",
-                    "paralleleOcean": "",
-                    "image": "https://via.placeholder.com/150"
+                    "descriptif": "Une infrastructure cloud désigne un ensemble de ressources informatiques (serveurs, stockage, réseaux, bases de données, etc.) accessibles à distance via Internet, généralement proposées par des fournisseurs comme Amazon Web Services (AWS), Microsoft Azure, ou Google Cloud. Elle permet de stocker des données, exécuter des applications et héberger des services sans avoir besoin d'infrastructure physique locale. Les utilisateurs peuvent ajuster leurs besoins en ressources en fonction de la demande, ce qui rend l'infrastructure cloud flexible, évolutive et souvent plus économique.",
+                    "paralleleOcean": "La surpêche et l'infrastructure cloud partagent des similitudes sur l'exploitation excessive des ressources et les risques de déséquilibre :<ul><li>Exploitation excessive : La surpêche épuise les ressources marines, tout comme une utilisation excessive du cloud surcharge les serveurs et gaspille de l'énergie.</li><li>Déséquilibre : La surpêche perturbe les écosystèmes marins, de même qu'une mauvaise gestion du cloud peut entraîner des inefficacités et une surcharge des systèmes.</li></ul>",
+                    "image": "infra_cloud"
                 }
             ]
         }
