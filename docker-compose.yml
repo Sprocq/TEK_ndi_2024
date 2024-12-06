@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "3000:3000" # Maps port 3000 on the host to port 3000 in the container
+      - "4173:4173" # Maps port 3000 on the host to port 3000 in the container
     volumes:
       - ./src:/app/src # Syncs your source code for hot-reloading
       - /app/node_modules # Ensures node_modules inside the container do not sync with the host
