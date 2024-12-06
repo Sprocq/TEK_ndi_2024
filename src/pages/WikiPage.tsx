@@ -1,18 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 
-// Importer les données JSON depuis le fichier local
-import wikiJson from "../data/wiki.json";
+// Chargement des données depuis un fichier JSON
+import wikiData from "../data/wiki.json"; // Assurez-vous que ce fichier existe et est accessible
 
 const WikiPage: React.FC = () => {
   const navigate = useNavigate();
-  const [selectedTheme, setSelectedTheme] = useState(null);
+  const [selectedTheme, setSelectedTheme] = useState(wikiData.lstthemes[0]);
   const [selectedLevel, setSelectedLevel] = useState(1);
-
-  // Charger les données du fichier JSON dans l'état
-  useEffect(() => {
-    setSelectedTheme(wikiJson.lstthemes[0]); // Charger le premier thème par défaut
-  }, []);
 
   const handleLevelClick = (level) => {
     setSelectedLevel(level);
@@ -22,40 +17,27 @@ const WikiPage: React.FC = () => {
     navigate('/');
   };
 
-  // Fonction pour déterminer le filtre CSS du logo en fonction du thème
+  const currentEnemy =
+    selectedTheme.lstEnnemis.find((enemy) => enemy.niveauEnnemi === selectedLevel) || {};
+
+  // Fonction pour déterminer le filtre CSS basé sur le thème sélectionné
   const getLogoFilter = () => {
-    if (!selectedTheme) return "none";
     switch (selectedTheme.nomTheme) {
       case "Océan":
-        return "invert(100%) brightness(100%)";
+        return "invert(100%) brightness(100%)"; // Filtre pour le thème Océan
       case "Cyber":
-        return "brightness(0) saturate(100%) invert(28%) sepia(100%) saturate(5000%) hue-rotate(90deg) brightness(200%)";
+        return "brightness(0) saturate(100%) invert(28%) sepia(100%) saturate(5000%) hue-rotate(90deg) brightness(200%)"; // Filtre pour le thème Cyber
       default:
-        return "none";
+        return "none"; // Pas de filtre pour les autres thèmes (ex. Corps Humain)
     }
   };
-
-  // Fonction pour récupérer le champ parallèle en fonction du thème et de l'ennemi
-  const getParalleleField = (enemy) => {
-    if (!selectedTheme) return "";
-    if (selectedTheme.nomTheme === "Océan") {
-      return enemy.parallele || "Pas de parallèle disponible";
-    } else if (selectedTheme.nomTheme === "Corps Humain" || selectedTheme.nomTheme === "Cyber") {
-      return enemy.paralleleOcean || "Pas de parallèle disponible";
-    }
-    return "";
-  };
-
-  // Trouver l'ennemi correspondant au niveau sélectionné
-  const currentEnemy =
-    selectedTheme?.lstEnnemis.find((enemy) => enemy.niveauEnnemi === selectedLevel) || {};
 
   return (
     <div style={{ height: "100vh", display: "flex", flexDirection: "column" }}>
       {/* Header */}
       <div
         style={{
-          backgroundColor: selectedTheme?.couleur || "#fff",
+          backgroundColor: selectedTheme.couleurFond,
           padding: "10px",
           display: "flex",
           alignItems: "center",
@@ -73,24 +55,24 @@ const WikiPage: React.FC = () => {
               filter: getLogoFilter(), // Application du filtre dynamique
             }}
           />
-          <h1 style={{ margin: 0, color: "#000" }}>TEK Nuit De l'Info 2024</h1>
+          <h1 style={{ margin: 0, color: selectedTheme.couleurTexte }}>TEK Nuit De l'Info 2024</h1>
         </div>
       </div>
 
       <div style={{ flex: 1, display: "flex" }}>
         {/* Colonne gauche */}
         <div style={{ width: "20%", display: "flex", flexDirection: "column" }}>
-          {wikiJson.lstthemes.map((theme) => (
+          {wikiData.lstthemes.map((theme) => (
             <button
               key={theme.id}
               onClick={() => setSelectedTheme(theme)}
               style={{
                 flex: 1,
-                backgroundColor: theme.couleur,
-                color: "#000",
+                backgroundColor: theme.couleurFond,
+                color: theme.couleurTexte,
                 border: "1px solid #ddd",
                 cursor: "pointer",
-                fontWeight: selectedTheme?.id === theme.id ? "bold" : "normal",
+                fontWeight: selectedTheme.id === theme.id ? "bold" : "normal",
               }}
             >
               {theme.nomTheme}
@@ -115,8 +97,8 @@ const WikiPage: React.FC = () => {
                 onClick={() => handleLevelClick(level)}
                 style={{
                   fontWeight: selectedLevel === level ? "bold" : "normal",
-                  backgroundColor: selectedLevel === level ? selectedTheme?.couleur : "#fff",
-                  color: selectedLevel === level ? "#000" : "#000",
+                  backgroundColor: selectedLevel === level ? selectedTheme.couleurFond : "#fff",
+                  color: selectedLevel === level ? selectedTheme.couleurTexte : "#000",
                   border: "1px solid #ddd",
                   borderRadius: "5px",
                   cursor: "pointer",
@@ -134,7 +116,7 @@ const WikiPage: React.FC = () => {
             <div style={{ flex: 1 }}>
               {currentEnemy.image && (
                 <img
-                  src={currentEnemy.image}
+                  src={`../src/img/${currentEnemy.image}`}
                   alt={currentEnemy.nomEnnemi}
                   style={{ width: "100%" }}
                 />
@@ -145,7 +127,9 @@ const WikiPage: React.FC = () => {
               <p>Descriptif : {currentEnemy.descriptif || "Pas de description"}</p>
               <p>
                 Parallèle :{" "}
-                <span dangerouslySetInnerHTML={{ __html: getParalleleField(currentEnemy) }} />
+                {currentEnemy.paralleleOcean
+                  ? currentEnemy.paralleleOcean
+                  : "Pas de parallèle disponible"}
               </p>
             </div>
           </div>

@@ -80,7 +80,7 @@
                     "niveauEnnemi": 3,
                     "descriptif": "Une infrastructure cloud désigne un ensemble de ressources informatiques (serveurs, stockage, réseaux, bases de données, etc.) accessibles à distance via Internet, généralement proposées par des fournisseurs comme Amazon Web Services (AWS), Microsoft Azure, ou Google Cloud. Elle permet de stocker des données, exécuter des applications et héberger des services sans avoir besoin d'infrastructure physique locale. Les utilisateurs peuvent ajuster leurs besoins en ressources en fonction de la demande, ce qui rend l'infrastructure cloud flexible, évolutive et souvent plus économique.",
                     "paralleleOcean": "La surpêche et l'infrastructure cloud partagent des similitudes sur l'exploitation excessive des ressources et les risques de déséquilibre :<ul><li>Exploitation excessive : La surpêche épuise les ressources marines, tout comme une utilisation excessive du cloud surcharge les serveurs et gaspille de l'énergie.</li><li>Déséquilibre : La surpêche perturbe les écosystèmes marins, de même qu'une mauvaise gestion du cloud peut entraîner des inefficacités et une surcharge des systèmes.</li></ul>",
-                    "image": "infra_cloud"
+                    "image": "infra_cloud.png"
                 }
             ]
         }
