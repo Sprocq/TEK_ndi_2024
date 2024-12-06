@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import '../HomePage.css';
 import logo from '../images/tek.png'; // Ajout du logo
 
+
 const HomePage: React.FC = () => {
   const navigate = useNavigate();
   const [theme, setTheme] = useState<'corps' | 'ocean' | 'cyber'>('ocean');
@@ -33,6 +34,14 @@ const HomePage: React.FC = () => {
 
   const handleGoToCookiesClicker = () => {
     navigate('/CookiesClicker');
+  };
+
+  const handleGoToGame = () => {
+    navigate('/Game');
+  };
+
+  const handleGoToCaptcha = () => {
+    window.location.href = './src/pages/Captcha/Captcha.html'; // Redirige vers captch.html
   };
 
   return (
@@ -93,9 +102,9 @@ const HomePage: React.FC = () => {
           {hoveredSection === 'jeu' && (
             <button
               className="action-button"
-              onClick={() => alert('Jeu lancé !')}
+              onClick={handleGoToGame}
             >
-              Lancer le Jeu
+              Télécharger le fichier
             </button>
           )}
         </div>
@@ -119,6 +128,12 @@ const HomePage: React.FC = () => {
             <button className="action-button" onClick={handleGoToWiki}>Explorer le Wiki</button>
           )}
         </div>
+      </div>
+      {/* Bouton de téléchargement */}
+      <div className="download-section" style={{ marginTop: '20px', display: 'flex', gap: '10px' }}>
+        <button className="captcha-button" onClick={handleGoToCaptcha}>
+          Accéder au Captcha
+        </button>
       </div>
     </div>
   );
