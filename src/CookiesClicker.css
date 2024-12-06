@@ -1,3 +1,11 @@
+.header h1 {
+  cursor: pointer;
+}
+
+.header img {
+  cursor: pointer;
+}
+
 .cookies-clicker {
   font-family: Arial, sans-serif;
   padding: 20px;
