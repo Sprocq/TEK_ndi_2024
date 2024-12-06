@@ -4,7 +4,77 @@ import "../CookiesClicker.css";
 import logo from '../images/tek.png'; // Ajout du logo
 import { useNavigate } from "react-router-dom";  // Assurez-vous que `useNavigate` est importé correctement
 
+
+
+const partieObject = {
+  idTheme: 0,
+  score: 0,
+  lstEvenement: [
+    {
+      idEvenement: 0,
+      niveau: 0,
+      prix: 0,
+    },
+  ],
+  clickValue: 1,
+  cps: 0,
+};
+
+// Initialisation première evenement
+partieObject.lstEvenement[0].idEvenement = cookies.lstEvenement[0].idEvenement;
+partieObject.lstEvenement[0].niveau = 1;
+partieObject.lstEvenement[0].prix = cookies.lstEvenement[0].prix;
+
+function updateCps(idEvenement: number) {
+  let cps = partieObject.cps;
+  const evenement = cookies.lstEvenement.find(
+    (evenement) => evenement.idEvenement === idEvenement
+  );
+  if (evenement) {
+    if (evenement.estBonus) {
+      cps += evenement.value;
+    } else {
+      cps -= evenement.value;
+    }
+    partieObject.cps = cps;
+  }
+}
+
+function updateDegats(idEvenement: number) {
+  let clickValue = partieObject.clickValue;
+  const evenement = cookies.lstEvenement.find(
+    (evenement) => evenement.idEvenement === idEvenement
+  );
+  if (evenement) {
+    if (evenement.estBonus) {
+      clickValue = clickValue * evenement.value;
+    } else {
+      clickValue = clickValue / evenement.value;
+    }
+    partieObject.clickValue = clickValue;
+  }
+}
+
+function updatePrix(idEvenement: number) {
+  const evenement = cookies.lstEvenement.find(
+    (evenement) => evenement.idEvenement === idEvenement
+  );
+  if (evenement) {
+    const evenementIndex = partieObject.lstEvenement.findIndex(
+      (evenement2) => evenement2.idEvenement === evenement.idEvenement
+    );
+    partieObject.lstEvenement[evenementIndex].prix =
+      partieObject.lstEvenement[evenementIndex].prix * evenement.multPrix;
+  }
+}
+
+const typeEvenement = ["Autoclick", "Degats", "Reduction", "Production"];
+
+let production = [1, 0];
+
+
 const CookiesClicker: React.FC = () => {
+
   const [theme, setTheme] = useState<'corps' | 'ocean' | 'cyber'>('ocean');
   const [idTheme, setIdTheme] = useState<number>(0);  // Ajoute un état pour idTheme
   const navigate = useNavigate(); // Déplacez l'appel à useNavigate ici, dans le composant
@@ -24,71 +94,7 @@ const CookiesClicker: React.FC = () => {
     setIdTheme(themeIndex); // Mettre à jour l'idTheme avec l'index du thème choisi
   };
 
-  const partieObject = {
-    idTheme: idTheme,
-    score: 0,
-    lstEvenement: [
-      {
-        idEvenement: 0,
-        niveau: 0,
-        prix: 0,
-      },
-    ],
-    clickValue: 1,
-    cps: 0,
-  };
-
-  // Initialisation première evenement
-  partieObject.lstEvenement[0].idEvenement = cookies.lstEvenement[0].idEvenement;
-  partieObject.lstEvenement[0].niveau = 1;
-  partieObject.lstEvenement[0].prix = cookies.lstEvenement[0].prix;
-
-  function updateCps(idEvenement: number) {
-    let cps = partieObject.cps;
-    const evenement = cookies.lstEvenement.find(
-      (evenement) => evenement.idEvenement === idEvenement
-    );
-    if (evenement) {
-      if (evenement.estBonus) {
-        cps += evenement.value;
-      } else {
-        cps -= evenement.value;
-      }
-      partieObject.cps = cps;
-    }
-  }
-
-  function updateDegats(idEvenement: number) {
-    let clickValue = partieObject.clickValue;
-    const evenement = cookies.lstEvenement.find(
-      (evenement) => evenement.idEvenement === idEvenement
-    );
-    if (evenement) {
-      if (evenement.estBonus) {
-        clickValue = clickValue * evenement.value;
-      } else {
-        clickValue = clickValue / evenement.value;
-      }
-      partieObject.clickValue = clickValue;
-    }
-  }
-
-  function updatePrix(idEvenement: number) {
-    const evenement = cookies.lstEvenement.find(
-      (evenement) => evenement.idEvenement === idEvenement
-    );
-    if (evenement) {
-      const evenementIndex = partieObject.lstEvenement.findIndex(
-        (evenement2) => evenement2.idEvenement === evenement.idEvenement
-      );
-      partieObject.lstEvenement[evenementIndex].prix =
-        partieObject.lstEvenement[evenementIndex].prix * evenement.multPrix;
-    }
-  }
-
-  const typeEvenement = ["Autoclick", "Degats", "Reduction", "Production"];
-
-  let production = [1, 0];
+  partieObject.idTheme = idTheme;
 
   // Utilise idTheme pour accéder au thème choisi
   let themeData = cookies.lstThemes[idTheme];
@@ -167,7 +173,7 @@ const CookiesClicker: React.FC = () => {
           <div className="stats">
             <label>
               {themeData.cookie} : <span></span>
-              <input type="text" value={count} readOnly />
+              <input type="text" value={count} onChange={() => setCount(0)} />
             </label>
             <p>
               Génération de {themeData.cookie} par click :{" "}
@@ -186,86 +192,87 @@ const CookiesClicker: React.FC = () => {
             />
           </div>
         </div>
-      </div>
-      <div className="improvements">
-        <h2>Améliorations</h2>
-        {evenementsAchetables.map((evenement) => (
-          <div key={evenement[0].idEvenement}>
-            <div className="div-name">
-              <h3>{nomBouton[evenementsAchetables.indexOf(evenement)]}</h3>
-            </div>
-            <div className="amelioration">
-              <p>
-                Description : <b>{evenement[0].descriptif}</b>
-              </p>
-              <p>
-                Niveau :{" "}
-                <b>
-                  {
-                    partieObject.lstEvenement[
-                      partieObject.lstEvenement.findIndex(
-                        (evenement2) =>
-                          evenement2.idEvenement === evenement[0].idEvenement
-                      )
-                    ].niveau
-                  }
-                </b>
-              </p>
-              <button
-                className="button-improvement"
-                onClick={() => {
-                  const evenementIndex = partieObject.lstEvenement.findIndex(
-                    (evenement2) =>
-                      evenement2.idEvenement === evenement[0].idEvenement
-                  );
-                  if (count >= partieObject.lstEvenement[evenementIndex].prix) {
-                    partieObject.lstEvenement[evenementIndex].niveau++;
-                    setCount(
-                      count - partieObject.lstEvenement[evenementIndex].prix
-                    );
-                    updatePrix(evenement[0].idEvenement);
-                    switch (evenement[0].type) {
-                      case typeEvenement[0]:
-                        updateCps(evenement[0].idEvenement);
-                        break;
-                      case typeEvenement[1]:
-                        updateDegats(evenement[0].idEvenement);
-                        break;
-                      case typeEvenement[2]:
-                        const evenementReduc = cookies.lstEvenement.find(
-                          (evenementReduc) =>
-                            evenementReduc.idEvenement ===
-                            evenement[0].idEvenement
-                        );
-                        if (evenementReduc) {
-                          let soustraire = Math.round(
-                            count * (evenementReduc.value / 100)
-                          );
-                          setCount((prevCount) => prevCount - soustraire);
-                        }
-                        break;
-                      case typeEvenement[3]:
-                        production[0] = evenement[0].value;
-                        production[1] = evenement[0].temps
-                          ? evenement[0].temps
-                          : 0;
-                        break;
+
+        <div className="improvements">
+          <h2>Améliorations</h2>
+          {evenementsAchetables.map((evenement) => (
+            <div key={evenement[0].idEvenement}>
+              <div className="div-name">
+                <h3>{nomBouton[evenementsAchetables.indexOf(evenement)]}</h3>
+              </div>
+              <div className="amelioration">
+                <p>
+                  Description : <b>{evenement[0].descriptif}</b>
+                </p>
+                <p>
+                  Niveau :{" "}
+                  <b>
+                    {
+                      partieObject.lstEvenement[
+                        partieObject.lstEvenement.findIndex(
+                          (evenement2) =>
+                            evenement2.idEvenement === evenement[0].idEvenement
+                        )
+                      ].niveau
                     }
-                  }
-                }}
-              >
-                {partieObject.lstEvenement[
-                  partieObject.lstEvenement.findIndex(
-                    (evenement2) =>
-                      evenement2.idEvenement === evenement[0].idEvenement
-                  )
-                ].prix +
-                  " " +
-                  theme.cookie}
-              </button>
+                  </b>
+                </p>
+                <button
+                  className="button-improvement"
+                  onClick={() => {
+                    const evenementIndex = partieObject.lstEvenement.findIndex(
+                      (evenement2) =>
+                        evenement2.idEvenement === evenement[0].idEvenement
+                    );
+                    if (count >= partieObject.lstEvenement[evenementIndex].prix) {
+                      partieObject.lstEvenement[evenementIndex].niveau++;
+                      setCount(
+                        count - partieObject.lstEvenement[evenementIndex].prix
+                      );
+                      updatePrix(evenement[0].idEvenement);
+                      switch (evenement[0].type) {
+                        case typeEvenement[0]:
+                          updateCps(evenement[0].idEvenement);
+                          break;
+                        case typeEvenement[1]:
+                          updateDegats(evenement[0].idEvenement);
+                          break;
+                        case typeEvenement[2]:
+                          const evenementReduc = cookies.lstEvenement.find(
+                            (evenementReduc) =>
+                              evenementReduc.idEvenement ===
+                              evenement[0].idEvenement
+                          );
+                          if (evenementReduc) {
+                            let soustraire = Math.round(
+                              count * (evenementReduc.value / 100)
+                            );
+                            setCount((prevCount) => prevCount - soustraire);
+                          }
+                          break;
+                        case typeEvenement[3]:
+                          production[0] = evenement[0].value;
+                          production[1] = evenement[0].temps
+                            ? evenement[0].temps
+                            : 0;
+                          break;
+                      }
+                    }
+                  }}
+                >
+                  {partieObject.lstEvenement[
+                    partieObject.lstEvenement.findIndex(
+                      (evenement2) =>
+                        evenement2.idEvenement === evenement[0].idEvenement
+                    )
+                  ].prix +
+                    " " +
+                    themeData.cookie}
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
