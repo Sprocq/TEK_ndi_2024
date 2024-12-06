@@ -138,7 +138,7 @@ const CookiesClicker: React.FC = () => {
         <div className="stats">
           <label>
             {theme.cookie} : <span></span>
-            <input type="text" value={count} readOnly />
+            <input type="text" value={count} onChange={() => setCount(0)} />
           </label>
           <p>
             Génération de {theme.cookie} par click :{" "}
